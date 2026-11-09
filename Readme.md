@@ -46,7 +46,7 @@ docker run --name monster-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=ma_bas
 ./mvnw spring-boot:run
 
 # Windows
-mvnw.cmd spring-boot:run
+.\mvnw.cmd spring-boot:run
 ```
 
 Disponible sur http://localhost:8080
