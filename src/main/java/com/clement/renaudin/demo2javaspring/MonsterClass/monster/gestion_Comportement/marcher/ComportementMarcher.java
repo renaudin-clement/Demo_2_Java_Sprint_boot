@@ -1,5 +1,7 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_Comportement.marcher;
 
-public class ComportementMarcher {
-    
+public interface ComportementMarcher {
+
+
+    public void marcher() ;
 }
