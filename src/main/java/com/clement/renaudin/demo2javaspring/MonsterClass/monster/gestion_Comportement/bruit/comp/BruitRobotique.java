@@ -4,6 +4,7 @@ import com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_Comport
 
 public class BruitRobotique  implements ComportementDubruit {
     public BruitRobotique() {
+        super();
     }
 
     @Override

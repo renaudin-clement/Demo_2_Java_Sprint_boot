@@ -3,6 +3,7 @@ import com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_Comport
 
 public class Silencieux  implements ComportementDubruit {
     public Silencieux() {
+        super();
     }
 
     @Override
