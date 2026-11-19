@@ -1,19 +1,19 @@
-package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionUser;
+package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster;
 
 
 import org.springframework.web.bind.annotation.*;
 
-import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionUser.UserRepositorie;
+import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.Monster;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-public class UserMonster {
+public class MonsterController {
 
     private final MonsterRepositorie monsterRepository;
 
-    public UserMonster(MonsterRepositorie MonsterRepositorie) {
+    public MonsterController(MonsterRepositorie MonsterRepositorie) {
         this.monsterRepository = MonsterRepositorie;
     }
 
