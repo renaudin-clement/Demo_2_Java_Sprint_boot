@@ -8,19 +8,21 @@ public abstract class Monster {
 
     private GroupementStrat groupementStrat;
     private State Niveau;
-    
-    private String nom;
-    private int id;
-    private int clique;
+    private String name;
+    private String etat;
+    private int id_monsters;
+    private int id_enclots;
+    private int compteur_clique;
     private int xp;
 
-    public Monster(State Niveau, GroupementStrat groupementStrat, String nom, int id, int clique, int xp) {
-
+    public Monster(State Niveau, GroupementStrat groupementStrat, String name, String etat, int id_monsters, int id_enclots, int compteur_clique, int xp) {
         this.Niveau = Niveau;
         this.groupementStrat = groupementStrat;
-        this.nom = nom;
-        this.id = id;
-        this.clique = clique;
+        this.name = name;
+        this.etat = etat;
+        this.id_monsters = id_monsters;
+        this.id_enclots = id_enclots;
+        this.compteur_clique = compteur_clique;
         this.xp = xp;
     }
 
@@ -41,27 +43,27 @@ public abstract class Monster {
     }
 
     public String getNom() {
-        return nom;
+        return name;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNom(String name) {
+        this.name = name;
     }
 
     public int getId() {
-        return id;
+        return id_monsters;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int id_monsters) {
+        this.id_monsters = id_monsters;
     }
 
     public int getClique() {
-        return clique;
+        return compteur_clique;
     }
 
-    public void setClique(int clique) {
-        this.clique = clique;
+    public void setClique(int compteur_clique) {
+        this.compteur_clique = compteur_clique;
     }
 
     public int getXp() {
@@ -72,4 +74,19 @@ public abstract class Monster {
         this.xp = xp;
     }
 
+    public String getEtat() {
+        return etat;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public int getId_enclots() {
+        return id_enclots;
+    }
+
+    public void setId_enclots(int id_enclots) {
+        this.id_enclots = id_enclots;
+    }
 }
