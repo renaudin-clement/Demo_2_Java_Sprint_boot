@@ -1,22 +1,19 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster;
 
-import  com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_State.State;
 import com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_Comportement.GroupementStrat;;
 
 
 public abstract class Monster {
 
     private GroupementStrat groupementStrat;
-    private State Niveau;
     private String name;
     private String etat;
-    private int id_monsters;
-    private int id_enclots;
+    private long id_monsters;
+    private long id_enclots;
     private int compteur_clique;
     private int xp;
 
-    public Monster(State Niveau, GroupementStrat groupementStrat, String name, String etat, int id_monsters, int id_enclots, int compteur_clique, int xp) {
-        this.Niveau = Niveau;
+    public Monster(GroupementStrat groupementStrat, String name, String etat, long id_monsters, long id_enclots, int compteur_clique, int xp) {
         this.groupementStrat = groupementStrat;
         this.name = name;
         this.etat = etat;
@@ -34,14 +31,6 @@ public abstract class Monster {
         this.groupementStrat = groupementStrat;
     }
 
-    public State getNiveau() {
-        return Niveau;
-    }
-
-    public void setNiveau(State niveau) {
-        Niveau = niveau;
-    }
-
     public String getNom() {
         return name;
     }
@@ -50,11 +39,11 @@ public abstract class Monster {
         this.name = name;
     }
 
-    public int getId() {
+    public long getId() {
         return id_monsters;
     }
 
-    public void setId(int id_monsters) {
+    public void setId(long id_monsters) {
         this.id_monsters = id_monsters;
     }
 
@@ -82,11 +71,11 @@ public abstract class Monster {
         this.etat = etat;
     }
 
-    public int getId_enclots() {
+    public long getId_enclots() {
         return id_enclots;
     }
 
-    public void setId_enclots(int id_enclots) {
+    public void setId_enclots(long id_enclots) {
         this.id_enclots = id_enclots;
     }
 }
