@@ -19,7 +19,7 @@ public class MonsterRepositorie {
     }
 
     private final RowMapper<Monster> monsterRowMapper = (rs, rowNum) ->  {
-        long id = rs.getLong("id_Monster");
+        long id = rs.getLong("id_monsters");
         String name = rs.getString("name");
         String etat = rs.getString("etat");
         int id_enclots = rs.getInt("id_enclots");
@@ -38,12 +38,12 @@ public class MonsterRepositorie {
 
 
     public List<Monster> findAll() {
-        return jdbcTemplate.query("SELECT id_Monster, name, emails, xp_client FROM monsters", monsterRowMapper);
+        return jdbcTemplate.query("SELECT id_monsters,name, etat, id_enclots, compteur_clique,xp FROM monsters", monsterRowMapper);
     }
 
-    public Monster findById(Long id_Monster) {
+    public Monster findById(Long id_monsters) {
         return jdbcTemplate.queryForObject(
-                "SELECT id_Monster, name, emails, xp_client FROM monsters WHERE id_Monster = ?",
-                monsterRowMapper, id_Monster);
+                "SELECT id_monsters, name, etat, id_enclots, compteur_clique, xp FROM monsters WHERE id_monsters = ?",
+                monsterRowMapper, id_monsters);
     }
 }

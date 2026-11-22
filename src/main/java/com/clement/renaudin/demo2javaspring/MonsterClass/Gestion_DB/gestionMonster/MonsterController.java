@@ -2,13 +2,10 @@ package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMons
 
 
 import org.springframework.web.bind.annotation.*;
-
-import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.Monster;
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/monsters")
 public class MonsterController {
 
     private final MonsterRepositorie monsterRepository;
@@ -22,8 +19,8 @@ public class MonsterController {
         return monsterRepository.findAll();
     }
 
-    @GetMapping("/{id_Monster}")
-    public Monster getById(@PathVariable Long id_Monster) {
-        return monsterRepository.findById(id_Monster);
+    @GetMapping("/{id_monsters}")
+    public Monster getById(@PathVariable Long id_monsters) {
+        return monsterRepository.findById(id_monsters);
     }
 }
