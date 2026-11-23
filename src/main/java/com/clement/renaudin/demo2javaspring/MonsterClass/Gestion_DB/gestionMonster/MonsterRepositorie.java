@@ -46,4 +46,10 @@ public class MonsterRepositorie {
                 "SELECT id_monsters, name, etat, id_enclots, compteur_clique, xp FROM monsters WHERE id_monsters = ?",
                 monsterRowMapper, id_monsters);
     }
+
+    public List<Monster> findByEnclotId(Long id_enclots) {
+        return jdbcTemplate.query(
+                "SELECT id_monsters, name, etat, id_enclots, compteur_clique, xp FROM monsters WHERE id_enclots = ?",
+                monsterRowMapper, id_enclots);
+    }
 }

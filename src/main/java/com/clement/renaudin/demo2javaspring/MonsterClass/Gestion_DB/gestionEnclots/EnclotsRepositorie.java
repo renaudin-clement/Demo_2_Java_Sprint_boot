@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.Monster;
+import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.MonsterRepositorie;
 
 import java.util.List;
 
@@ -35,14 +36,6 @@ public class EnclotsRepositorie {
                 enclotsRowMapper, id_enclots);
     }
 
-
-
-
-    /*  En cours de dev pour la requete qui permet de recuperer les monstres associer a un enclot
-    public ResultSetExtractor<T>  findMonsterAssocier(Long id_enclots) {
-        return jdbcTemplate.query( "SELECT id_enclots, id_user, id_monsters, nameEnclot,name FROM enclotMonsters JOIN monsters ON enclotMonsters.id_enclots = monsters.id_enclots WHERE enclotMonsters.id_enclots = ?");
-    }
-    */
 }
 
 

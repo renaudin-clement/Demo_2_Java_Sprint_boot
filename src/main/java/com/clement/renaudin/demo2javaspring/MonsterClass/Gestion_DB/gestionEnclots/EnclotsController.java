@@ -1,8 +1,8 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionEnclots;
 
 import org.springframework.web.bind.annotation.*;
-
-
+import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.Monster;
+import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.MonsterRepositorie;
 
 import java.util.List;
 
@@ -12,9 +12,11 @@ import java.util.List;
 public class EnclotsController {
 
     private final EnclotsRepositorie enclotsRepository;
+    private final MonsterRepositorie monsterRepositorie;
 
-    public EnclotsController(EnclotsRepositorie EnclotsRepositorie) {
+    public EnclotsController(EnclotsRepositorie EnclotsRepositorie, MonsterRepositorie MonsterRepositorie) {
         this.enclotsRepository = EnclotsRepositorie;
+        this.monsterRepositorie = MonsterRepositorie;
     }
 
     @GetMapping
@@ -27,9 +29,10 @@ public class EnclotsController {
         return enclotsRepository.findById(id_enclots);
     }
 
+
     @GetMapping("/{id_enclots}/monsters")
-    public Enclots getMonsterAssocier(@PathVariable Long id_enclots) {
-        return enclotsRepository.findMonsterAssocier(id_enclots);
+    public List<Monster> getMonstersByEnclotId(@PathVariable Long id_enclots) {
+        return monsterRepositorie.findByEnclotId(id_enclots);
     }
-    
+
 }
