@@ -1,12 +1,8 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionEnclots;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-
-import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.Monster;
-import com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster.MonsterRepositorie;
 
 import java.util.List;
 

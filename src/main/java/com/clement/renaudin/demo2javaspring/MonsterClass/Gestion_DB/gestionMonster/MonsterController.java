@@ -1,6 +1,4 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster;
-
-
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 

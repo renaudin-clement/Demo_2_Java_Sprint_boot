@@ -1,7 +1,5 @@
 package com.clement.renaudin.demo2javaspring.MonsterClass.Gestion_DB.gestionMonster;
-
 import com.clement.renaudin.demo2javaspring.MonsterClass.monster.gestion_Comportement.GroupementStrat;;
-
 
 public abstract class Monster {
 
